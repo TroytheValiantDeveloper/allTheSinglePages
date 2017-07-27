@@ -11,7 +11,7 @@ class App extends Component {
                         <IndexRoute component={TwitterFeed} />
                         <Route path='instagram' component={Instagram} />
                     </Route>
-                    <Route path='aboutMe' component={AboutMe} >
+                    <Route path='aboutUs' component={AboutUs} >
                         <Route path='contactUs' component={ContactUs} />
                         <Route path='portfolio' component={Portfolio} />
                     </Route>
@@ -26,7 +26,7 @@ const Nav = () => (
   <div>
     <Link to='/'>Home</Link>&nbsp;
     <Link to='/address'>Address</Link>&nbsp;
-    <Link to='/aboutMe'>About Me</Link>
+    <Link to='/aboutUs'>About Us</Link>
   </div>
 )
 
@@ -188,7 +188,7 @@ const Address = (props) => <div>
       <h1>We are located at 555 Jackson St.</h1>
       {props.children}
 </div>
-const AboutMe = (props) => <div>
+const AboutUs = (props) => <div>
       <div className='col-xs-12'>
           <div className='row'>
             <div className='col-xs-12'>
