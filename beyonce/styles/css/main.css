@@ -1,0 +1,277 @@
+/* ========================================================================*/
+/* ! VARIABLES */
+/* ========================================================================*/
+
+/* COLORS */
+
+/* BRICK */
+.color-brick,
+.brick {
+  background: #FF8357;
+}
+
+/* BLUE */
+.color-blue,
+.blue {
+  background: #4398b7;
+}
+
+/* YELLOW */
+.color-yellow,
+.yellow {
+  background: #FFDD57;
+}
+
+/* INDIGO */
+.color-indigo,
+.indigo {
+  background: #83C7D4;
+}
+
+/* ANTHRACITE  */
+.color-anthracite,
+.anthracite {
+  background: #414A53;
+}
+
+/* GREEN */
+.color-green,
+.green {
+  background:  #87C97F;
+}
+
+/* --------------------------------------------*/
+/* ! CONSTANTS */
+/*---------------------------------------------*/
+.bloc {
+  color: #FFF;
+}
+
+/* ========================================================================*/
+/* ! MIXINS & HELPER CLASS */
+/* ========================================================================*/
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-padding-horizontal {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* ========================================================================*/
+/* ! LAYOUT */
+/* ========================================================================*/
+.section-mosaic {
+  margin-top: 35px;
+}
+
+.section-mosaic > .section-mosaic {
+  margin-top: 0;
+}
+
+/* --------------------------------------------*/
+/* ! IMAGES */
+/*---------------------------------------------*/
+.photo {
+  width: 300px;
+  height: 150px;
+  margin-bottom: 45px;
+  border: 5px solid rgb(250, 70, 230);
+  border-radius: 25px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.photo:hover {
+  opacity: 0.8;
+}
+
+.photo img {
+
+}
+
+
+span {
+  text-align: center;
+  display: block;
+}
+
+.photo-gallery {
+  text-align: center;
+}
+
+.outer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  min-height: 1000px;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+
+.inner {
+  max-width: 100%;
+  width: 600px;
+  height: auto;
+  min-height: 200px;
+  margin: 0 auto;
+}
+
+.inner img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* --------------------------------------------*/
+/* ! MOSAIC */
+/*---------------------------------------------*/
+.section-mosaic img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 90%;
+}
+.col-small-high-bloc {
+
+}
+
+.col-small-high-bloc .row .bloc-small {
+  top: 21.5px;
+  bottom: 0;
+
+}
+
+.col-small-high-bloc .bloc-small-parent > .block-small-parent {
+  top: 15px;
+  bottom: 7.5px;
+}
+
+.bloc {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.20);
+}
+
+.bloc-big-parent {
+
+}
+
+.bloc-big-parent::before {
+  content: "";
+  display: block;
+  height: 0;
+  padding-bottom: 68.8%;
+}
+
+.bloc-big-parent .bloc-big {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+}
+
+.bloc-high-parent {
+
+}
+
+.bloc-high-parent::before {
+  content: "";
+  display: block;
+  height: 0;
+  padding-bottom: 145.5%;
+}
+
+.bloc-high-parent .bloc-high {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+}
+
+.bloc-small-parent {
+
+}
+
+.bloc-small-parent::before {
+  content: "";
+  display: block;
+  height: 0;
+  padding-bottom: 67%;
+}
+
+.bloc-small-parent .bloc-small {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 0;
+  left: 15px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .bloc-big-parent::before {
+    padding-bottom: 69.15%;
+  }
+  .bloc-high-parent::before {
+    padding-bottom: 148%;
+  }
+  .bloc-small-parent::before {
+    padding-bottom: 67%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .bloc-big-parent::before {
+    padding-bottom: 66.05%;
+  }
+
+  .bloc-high-parent {
+
+  }
+
+  .bloc-high-parent::before {
+    padding-bottom: 93.6%;
+  }
+
+  .bloc-high-parent .bloc-high {
+    top: 45px;
+  }
+
+  .bloc-small-parent::before {
+    padding-bottom: 64.92%;
+  }
+}
+
+@media (max-width: 767px) {
+  .bloc-big-parent::before {
+    padding-bottom: 66.05%;
+  }
+
+  .bloc-high-parent {
+
+  }
+
+  .bloc-high-parent::before {
+    padding-bottom: 73.796%;
+  }
+
+  .bloc-high-parent .bloc-high {
+    top: 45px;
+  }
+
+  .bloc-small-parent::before {
+    padding-bottom: 64.92%;
+  }
+}

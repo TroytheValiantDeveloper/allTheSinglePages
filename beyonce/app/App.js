@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory, DefaultRoute } from 'react-router'
+import Lightbox from '../components/Lightbox.js'
 
 class App extends Component {
     render () {
@@ -15,6 +16,8 @@ class App extends Component {
                         <Route path='contactUs' component={ContactUs} />
                         <Route path='portfolio' component={Portfolio} />
                     </Route>
+                    <Route path='contactUs' component={ContactUs} >
+                    </Route>
                     <Route path='*' component={NotFound} />
                 </Route>
             </Router>
@@ -27,6 +30,7 @@ const Nav = () => (
     <Link to='/'>Home</Link>&nbsp;
     <Link to='/address'>Address</Link>&nbsp;
     <Link to='/aboutUs'>About Us</Link>
+    <Link to="/contactUs">Contact Us</Link>
   </div>
 )
 
@@ -41,9 +45,10 @@ const PhotoGallery = React.createClass({
 
         var photos = this.props.photos.map(function(photo, i) {
             return (
-                        <div className='col-xs-6 col-sm-4' key={i}>
+                        <div className='col-xs-12 col-sm-3 col-md-6 col-lg-4' key={i}>
                             <Photo id={photo.id} src={photo.url} key={i} caption={photo.caption} />
                         </div>
+
 
                    )
         });
@@ -59,15 +64,408 @@ const PhotoGallery = React.createClass({
 const Photo = React.createClass({
 
 
+
     render: function() {
         return (
-            <div className='photo'>
+            <div className="photo">
                 <img className='img-responsive' id={this.props.id} src={this.props.src} />
                 <span>{this.props.caption}</span>
             </div>
         )
     }
 });
+
+const Gallery = React.createClass ({
+
+  render: function() {
+      return (
+      <div className="gallery-grid">
+        <div className="mosaic-1 section-mosaic mosaic-decroissante">
+          <div className="container">
+            <div className="row row-1">
+              <div className="col-xs-12 col-sm-9 col-md-6 bloc-parent bloc-big-parent">
+                <div className="bloc-big bloc blue">
+                  <img className='img-responsive'src={require('../assets/img1.jpg')} />
+                </div>
+
+              </div>
+
+              <div className="col-xs-12 col-sm-3 col-md-6 col-small-high-bloc no-padding-horizontal">
+                <div className="col-xs-12 col-md-6 col-small-bloc no-padding-horizontal">
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc anthracite">
+                      <img className='img-responsive'src={require('../assets/img2.jpg')} />
+                    </div>
+
+                  </div>
+
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc brick">
+                      <img className='img-responsive'src={require('../assets/img3.jpg')} />
+                    </div>
+
+                  </div>
+
+                </div>
+                <div className="col-xs-12 col-md-6 bloc-parent bloc-high-parent">
+                  <div className="bloc-high bloc indigo">
+                    <img className='img-responsive'src={require('../assets/img4.jpg')} />
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <div className="mosaic-2 section-mosaic mosaic-croissante">
+          <div className="container">
+            <div className="row row-1">
+              <div className="col-xs-12 col-sm-3 col-md-6 col-small-high-bloc no-padding-horizontal">
+                <div className="col-xs-12 col-md-6 col-small-bloc no-padding-horizontal">
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc brick">
+                      <img className='img-responsive'src={require('../assets/img5.jpg')} />
+                    </div>
+
+                  </div>
+
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc indigo">
+                      <img className='img-responsive'src={require('../assets/img6.jpg')} />
+                    </div>
+
+                  </div>
+
+                </div>
+                <div className="col-xs-12 col-md-6 bloc-parent bloc-high-parent">
+                  <div className="bloc-high bloc yellow">
+                    <img className='img-responsive'src={require('../assets/img7.jpg')} />
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div className="col-xs-12 col-sm-9 col-md-6 bloc-parent bloc-big-parent">
+                <div className="bloc-big bloc green">
+                  <img className='img-responsive'src={require('../assets/img8.jpg')} />
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="mosaic-3 section-mosaic mosaic-decroissante">
+          <div className="container">
+            <div className="row row-1">
+              <div className="col-xs-12 col-sm-9 col-md-6 bloc-parent bloc-big-parent">
+                <div className="bloc-big bloc green">
+                  <img className='img-responsive'src={require('../assets/img9.jpg')} />
+                </div>
+
+              </div>
+
+              <div className="col-xs-12 col-sm-3 col-md-6 col-small-high-bloc no-padding-horizontal">
+                <div className="col-xs-12 col-md-6 bloc-parent bloc-high-parent">
+                  <div className="bloc-high bloc anthracite">
+                    <img className='img-responsive'src={require('../assets/img10.jpg')} />
+                  </div>
+
+                </div>
+                <div className="col-xs-12 col-md-6 col-small-bloc no-padding-horizontal">
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc brick">
+                      <img className='img-responsive'src={require('../assets/img11.jpg')} />
+                    </div>
+
+                  </div>
+
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc yellow">
+                      <img className='img-responsive'src={require('../assets/img12.jpg')} />
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="mosaic-4 section-mosaic mosaic-decroissante">
+          <div className="container">
+            <div className="row row-1">
+              <div className="col-xs-12 col-sm-9 col-md-6 bloc-parent bloc-big-parent">
+                <div className="bloc-big bloc brick">
+                  <img className='img-responsive'src={require('../assets/img13.jpg')} />
+                </div>
+
+              </div>
+
+              <div className="col-xs-12 col-sm-3 col-md-6 col-small-high-bloc no-padding-horizontal">
+                <div className="col-xs-12 col-md-6 col-small-bloc no-padding-horizontal">
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc blue">
+                      <img className='img-responsive'src={require('../assets/img14.jpg')} />
+                    </div>
+
+                  </div>
+
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc anthracite">
+                      <img className='img-responsive'src={require('../assets/img15.jpg')} />
+                    </div>
+
+                  </div>
+
+                </div>
+                <div className="col-xs-12 col-md-6 bloc-parent bloc-high-parent">
+                  <div className="bloc-high bloc green">
+                    <img className='img-responsive'src={require('../assets/img16.jpg')} />
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="mosaic-5 section-mosaic mosaic-croissante">
+          <div className="container">
+            <div className="row row-1">
+              <div className="col-xs-12 col-sm-3 col-md-6 col-small-high-bloc no-padding-horizontal">
+                <div className="col-xs-12 col-md-6 col-small-bloc no-padding-horizontal">
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc blue">
+                      <img className='img-responsive'src={require('../assets/img17.jpg')} />
+                    </div>
+
+                  </div>
+
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc green">
+                      <img className='img-responsive'src={require('../assets/img18.jpg')} />
+                    </div>
+
+                  </div>
+
+                </div>
+                <div className="col-xs-12 col-md-6 bloc-parent bloc-high-parent">
+                  <div className="bloc-high bloc brick">
+                    <img className='img-responsive'src={require('../assets/img1.jpg')} />
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div className="col-xs-12 col-sm-9 col-md-6 bloc-parent bloc-big-parent">
+                <div className="bloc-big bloc yellow">
+                  <img className='img-responsive'src={require('../assets/img2.jpg')} />
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="mosaic-6 section-mosaic mosaic-decroissante">
+          <div className="container">
+            <div className="row row-1">
+              <div className="col-xs-12 col-sm-9 col-md-6 bloc-parent bloc-big-parent">
+                <div className="bloc-big bloc anthracite">
+                  <img className='img-responsive'src={require('../assets/img3.jpg')} />
+                </div>
+
+              </div>
+
+              <div className="col-xs-12 col-sm-3 col-md-6 col-small-high-bloc no-padding-horizontal">
+                <div className="col-xs-12 col-md-6 bloc-parent bloc-high-parent">
+                  <div className="bloc-high bloc indigo">
+                    <img className='img-responsive'src={require('../assets/img4.jpg')} />
+                  </div>
+
+                </div>
+                <div className="col-xs-12 col-md-6 col-small-bloc no-padding-horizontal">
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc blue">
+                      <img className='img-responsive'src={require('../assets/img5.jpg')} />
+                    </div>
+
+                  </div>
+
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc green">
+                      <img className='img-responsive'src={require('../assets/img6.jpg')} />
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="mosaic-7 section-mosaic mosaic-decroissante">
+          <div className="container">
+            <div className="row row-1">
+              <div className="col-xs-12 col-sm-9 col-md-6 bloc-parent bloc-big-parent">
+                <div className="bloc-big bloc brick">
+                  <img className='img-responsive'src={require('../assets/img7.jpg')} />
+                </div>
+
+              </div>
+
+              <div className="col-xs-12 col-sm-3 col-md-6 col-small-high-bloc no-padding-horizontal">
+                <div className="col-xs-12 col-md-6 col-small-bloc no-padding-horizontal">
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc indigo">
+                      <img className='img-responsive'src={require('../assets/img8.jpg')} />
+                    </div>
+
+                  </div>
+
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc blue">
+                      <img className='img-responsive'src={require('../assets/img9.jpg')} />
+                    </div>
+
+                  </div>
+
+                </div>
+                <div className="col-xs-12 col-md-6 bloc-parent bloc-high-parent">
+                  <div className="bloc-high bloc anthracite">
+                    <img className='img-responsive'src={require('../assets/img10.jpg')} />
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="mosaic-8 section-mosaic mosaic-croissante">
+          <div className="container">
+            <div className="row row-1">
+              <div className="col-xs-12 col-sm-3 col-md-6 col-small-high-bloc no-padding-horizontal">
+                <div className="col-xs-12 col-md-6 col-small-bloc no-padding-horizontal">
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc green">
+                      <img className='img-responsive'src={require('../assets/img11.jpg')} />
+                    </div>
+
+                  </div>
+
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc yellow">
+                      <img className='img-responsive'src={require('../assets/img12.jpg')} />
+                    </div>
+
+                  </div>
+
+                </div>
+                <div className="col-xs-12 col-md-6 bloc-parent bloc-high-parent">
+                  <div className="bloc-high bloc brick">
+                    <img className='img-responsive'src={require('../assets/img13.jpg')} />
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div className="col-xs-12 col-sm-9 col-md-6 bloc-parent bloc-big-parent">
+                <div className="bloc-big bloc indigo">
+                  <img className='img-responsive'src={require('../assets/img14.jpg')} />
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div className="mosaic-9 section-mosaic mosaic-decroissante">
+          <div className="container">
+            <div className="row row-1">
+              <div className="col-xs-12 col-sm-9 col-md-6 bloc-parent bloc-big-parent">
+                <div className="bloc-big bloc brick">
+                  <img className='img-responsive'src={require('../assets/img15.jpg')} />
+                </div>
+
+              </div>
+
+              <div className="col-xs-12 col-sm-3 col-md-6 col-small-high-bloc no-padding-horizontal">
+                <div className="col-xs-12 col-md-6 bloc-parent bloc-high-parent">
+                  <div className="bloc-high bloc yellow">
+                    <img className='img-responsive'src={require('../assets/img16.jpg')} />
+                  </div>
+
+                </div>
+                <div className="col-xs-12 col-md-6 col-small-bloc no-padding-horizontal">
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc green">
+                      <img className='img-responsive'src={require('../assets/img17.jpg')} />
+                    </div>
+
+                  </div>
+
+                  <div className="col-xs-12 bloc-parent bloc-small-parent">
+                    <div className="bloc-small bloc anthracite">
+                      <img className='img-responsive'src={require('../assets/img18.jpg')} />
+                    </div>
+
+                  </div>
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      )
+  }
+});
+
+
 
 const data = [
     {
@@ -203,14 +601,16 @@ const AboutUs = (props) => <div>
 
 const ContactUs = () => <div>
       <h1>Contact Us</h1>
+      <Gallery />
 </div>
 
 const Portfolio = () => <div>
-      <h1>Portfolio</h1>
+      <h1>Image Gallery With Lightbox</h1>
       <div className='container'>
           <PhotoGallery photos={data} />
       </div>
-    </div>
+      <Lightbox />
+</div>
 
 
 const NotFound = () => <h1>404.. This page is not found!</h1>

@@ -1,6 +1,7 @@
 module.exports = {
     entry: [
-        './app/main.js'
+        './app/main.js',
+        './styles/css/main.css'
     ],
     output: {
         path: './app',
@@ -21,6 +22,10 @@ module.exports = {
             {
               test: /\.(png|jpg)$/,
               loader: 'url-loader?limit=8192'
+            },
+            {
+              test: /\.css$/,
+              loader: "style-loader!css-loader"
             }
 
         ]
