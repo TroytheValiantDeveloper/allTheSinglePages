@@ -1,3 +1,7 @@
+body {
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/spiration-light.png") top center repeat;
+}
+
 /* ========================================================================*/
 /* ! VARIABLES */
 /* ========================================================================*/
@@ -77,13 +81,14 @@
 
 .img-popup-wrap {
   position: absolute;
-  top: 0;
+  top: -20px;
   right: 0;
   left: 0;
   width: 100%;
   height: auto;
   background: rgba(255, 255, 255, 0.9);
   min-height: 1200px;
+  padding-top: 50px;
 }
 
 .img-popup {
@@ -104,10 +109,15 @@
 	font-size: 70px;
 	line-height: 100px;
   color: rgb(255, 255, 255);
+  padding-bottom: 15px;
 }
 
 .img-popup .img-box img {
   margin: 0 auto;
+  max-width: 90%;
+  height: auto;
+  border-radius: 25px;
+  border: 10px solid rgb(250, 70, 230);
 }
 
 .img-popup .caption {
@@ -131,8 +141,8 @@
   border-radius: 50%;
   width: 100px;
   position: absolute;
-  top: 75px;
-  right: 45px;
+  top: 25px;
+  right: 30px;
   cursor: pointer;
 }
 
