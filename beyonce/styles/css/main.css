@@ -71,6 +71,71 @@
   margin-top: 0;
 }
 
+/* ========================================================================*/
+/* ! Image Popup */
+/* ========================================================================*/
+
+.img-popup-wrap {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: rgba(255, 255, 255, 0.9);
+  min-height: 1200px;
+}
+
+.img-popup {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/spiration-dark.png") top center repeat;
+  border-radius: 25px;
+  border: 10px solid rgb(140, 140, 140);
+  box-shadow: 10px 10px 10px #000;
+}
+
+.img-popup .title {
+  text-align: center;
+  font-family: 'Lobster', Georgia, Times, serif;
+	font-size: 70px;
+	line-height: 100px;
+  color: rgb(255, 255, 255);
+}
+
+.img-popup .img-box img {
+  margin: 0 auto;
+}
+
+.img-popup .caption {
+  font-family: 'Cabin', Helvetica, Arial, sans-serif;
+	font-size: 25px;
+	line-height: 25px;
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.img-popup .close-btn {
+  font-family: 'Lobster', Georgia, Times, serif;
+	font-size: 70px;
+	line-height: 100px;
+  text-align: left;
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+  border: 5px solid red;
+  padding-left: 17px;
+  border-radius: 50%;
+  width: 100px;
+  position: absolute;
+  top: 75px;
+  right: 45px;
+  cursor: pointer;
+}
+
 /* --------------------------------------------*/
 /* ! IMAGES */
 /*---------------------------------------------*/
@@ -143,7 +208,16 @@ span {
   left: 0;
   margin: auto;
   max-width: 90%;
+  max-height: 90%;
+  border-radius: 25px;
+  border: 5px solid rgb(255, 255, 255);
+  cursor: pointer;
 }
+
+.section-mosaic img:hover {
+
+}
+
 .col-small-high-bloc {
 
 }
