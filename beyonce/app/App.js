@@ -13,7 +13,6 @@ class App extends Component {
                         <Route path='instagram' component={Instagram} />
                     </Route>
                     <Route path='lightboxGallery' component={LightboxGallery} >
-                        <Route path='contactUs' component={ContactUs} />
                         <Route path='portfolio' component={Portfolio} />
                     </Route>
                     <Route path='MosaicGallery' component={MosaicGallery} >
@@ -674,10 +673,6 @@ const LightboxGallery = (props) => <div>
       </div>
 </div>
 
-const ContactUs = () => <div>
-      <h1>Image Gallery</h1>
-      <Gallery />
-</div>
 
 const MosaicGallery = () => <div>
       <h1>Image Gallery</h1>
@@ -689,7 +684,6 @@ const Portfolio = () => <div>
       <div className='container'>
           <PhotoGallery photos={data} />
       </div>
-      <Lightbox />
       <PopupBox />
 </div>
 
