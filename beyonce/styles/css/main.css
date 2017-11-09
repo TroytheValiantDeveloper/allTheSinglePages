@@ -76,17 +76,54 @@ body {
 }
 
 /* ========================================================================*/
+/* ! NAVBAR */
+/* ========================================================================*/
+.navbar {
+  padding: 25px;
+  width: 100%;
+  background: rgba(144, 144, 144, 1);
+  height: 100px;
+  box-shadow: 0px 40px 200px #000;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border: 10px solid rgb(255, 255, 255);
+  border-top: none;
+  z-index: 1000;
+}
+
+.navbar a {
+  outline: none;
+  border: 2px solid rgb(255, 255, 255);
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 25px;
+}
+
+.navbar a:hover {
+  background: rgba(255, 0, 0, 0.5);
+  border: 2px solid #414A53;
+  color: #414A53;
+
+}
+
+/* ========================================================================*/
 /* ! Image Popup */
 /* ========================================================================*/
 
 .img-popup-wrap {
   position: absolute;
-  top: -20px;
+  top: -80px;
   right: 0;
   left: 0;
   width: 100%;
   height: auto;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.9);
   min-height: 1200px;
   padding-top: 50px;
 }
@@ -95,6 +132,7 @@ body {
   position: relative;
   max-width: 960px;
   margin: 0 auto;
+  margin-top: 90px;
   padding-top: 100px;
   padding-bottom: 50px;
   background: url("https://www.toptal.com/designers/subtlepatterns/patterns/spiration-dark.png") top center repeat;

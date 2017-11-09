@@ -12,11 +12,11 @@ class App extends Component {
                         <IndexRoute component={TwitterFeed} />
                         <Route path='instagram' component={Instagram} />
                     </Route>
-                    <Route path='aboutUs' component={AboutUs} >
+                    <Route path='lightboxGallery' component={LightboxGallery} >
                         <Route path='contactUs' component={ContactUs} />
                         <Route path='portfolio' component={Portfolio} />
                     </Route>
-                    <Route path='contactUs' component={ContactUs} >
+                    <Route path='MosaicGallery' component={MosaicGallery} >
                     </Route>
                     <Route path='*' component={NotFound} />
                 </Route>
@@ -26,11 +26,11 @@ class App extends Component {
 }
 
 const Nav = () => (
-  <div>
-    <Link to='/'>Home</Link>&nbsp;
-    <Link to='/address'>Address</Link>&nbsp;
-    <Link to='/aboutUs'>About Us</Link>
-    <Link to="/contactUs">Contact Us</Link>
+  <div className="navbar">
+    <Link to='/' className="btn btn-default indigo bloc">Home</Link>&nbsp;&nbsp;
+    <Link to='/address' className="btn btn-default anthracite bloc">Address</Link>&nbsp;&nbsp;
+    <Link to='/lightboxGallery' className="btn btn-default anthracite bloc">Lightbox Gallery</Link>&nbsp;&nbsp;
+    <Link to="/mosaicGallery" className="btn btn-default anthracite bloc">Mosaic Gallery</Link>&nbsp;
   </div>
 )
 
@@ -661,7 +661,7 @@ const Address = (props) => <div>
       <h1>We are located at 555 Jackson St.</h1>
       {props.children}
 </div>
-const AboutUs = (props) => <div>
+const LightboxGallery = (props) => <div>
       <div className='col-xs-12'>
           <div className='row'>
             <div className='col-xs-12'>
@@ -675,6 +675,11 @@ const AboutUs = (props) => <div>
 </div>
 
 const ContactUs = () => <div>
+      <h1>Image Gallery</h1>
+      <Gallery />
+</div>
+
+const MosaicGallery = () => <div>
       <h1>Image Gallery</h1>
       <Gallery />
 </div>
